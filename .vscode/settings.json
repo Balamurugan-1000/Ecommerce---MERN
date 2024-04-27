@@ -1,0 +1,5 @@
+{
+    "github.copilot.editor.enableAutoCompletions": false,
+    "workbench.editor.tabActionCloseVisibility": false,
+    "emmet.triggerExpansionOnTab": false
+}

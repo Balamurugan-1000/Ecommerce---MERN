@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	background: #0f0f0f;
+
+}
+
+input {
+	background: #0f0f0f;
+	color: #fff;
+}
+
+body::-webkit-scrollbar {
+	display: none;
+}

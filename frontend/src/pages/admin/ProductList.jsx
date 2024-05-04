@@ -85,7 +85,6 @@ const ProductList = () => {
 							{image ? image.name : "Upload image"}
 							<input type="file" name="image" accept="image/*"
 								onChange={(e) => {
-									console.log(e.target.files)
 									uploadFileHandler(e)
 								}}
 								className={`${!image ? "hidden" : "text-white"}`}

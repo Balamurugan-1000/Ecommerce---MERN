@@ -10,10 +10,10 @@ import { FaBox, FaClock, FaShoppingCart, FaStar, FaStore } from 'react-icons/fa'
 import moment from "moment"
 import HeartIcon from "./HeartIcon"
 import { useState } from "react"
-import { useSelector } from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
 import Ratings from "./Ratings"
 import ProductTabs from "./ProductTabs"
-
+import { addToCart } from "../../redux/features/cart/cartSlice"
 
 const ProductDetails = () => {
 	const params = useParams()
@@ -30,7 +30,7 @@ const ProductDetails = () => {
 
 	const { userInfo } = useSelector(state => state.auth)
 	const [createReview, { isLoading: loadingProductReview }] = useCreateReviewMutation()
-
+	const dispatch = useDispatch()
 	const submitHandler = async (e) => {
 
 		try {
@@ -43,6 +43,10 @@ const ProductDetails = () => {
 		}
 	}
 
+	const addToCartHandler = () => {
+		dispatch(addToCart({ ...product, qty }))
+		navigate('/cart')
+	}
 
 
 	return (
@@ -103,7 +107,10 @@ const ProductDetails = () => {
 
 							<div className="btn-container">
 								<button
-									disabled={product.countInStock === 0} className="px-2 py-2 mt-4 ml-4 text-white rounded-lg bg-greenishBlueDark md:mt-0">Add to cart</button>
+									disabled={product.countInStock === 0}
+									className="px-2 py-2 mt-4 ml-4 text-white rounded-lg bg-greenishBlueDark md:mt-0"
+									onClick={addToCartHandler}
+								>Add to cart</button>
 							</div>
 
 						</div>

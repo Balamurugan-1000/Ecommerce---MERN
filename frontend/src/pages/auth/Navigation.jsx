@@ -23,7 +23,6 @@ const Navigation = () => {
 	const toggleDropDown = () => {
 		setDropDownOpen(!dropDownOpen);
 	};
-
 	const toggleShowSidebar = () => {
 		setShowSidebar(!showSidebar);
 	};
@@ -50,6 +49,7 @@ const Navigation = () => {
 		setDropDownOpen(false);
 	}, [userInfo, navigate]);
 
+	const { cartItems } = useSelector(state => state.cart)
 	return (
 		<div
 			onMouseLeave={handleMouseLeave}
@@ -86,6 +86,15 @@ const Navigation = () => {
 						Cart
 					</span>
 					{""}
+					<div className="absolute top-9">
+						{cartItems.length > 0 && (
+							<span>
+								<span className="h-[18px]  px-1 py-[2px] text-center w-[1px] text-sm text-black bg-greenishBlueDark rounded-full">
+									{cartItems.reduce((a, p) => Number(a + p.qty), 0)}
+								</span>
+							</span>
+						)}
+					</div>
 				</Link>
 				<Link
 					to="/favorite"

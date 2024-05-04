@@ -7,7 +7,6 @@ import { useEffect } from "react"
 
 const AllProduct = () => {
 	const { data: products, isError, isLoading, refetch } = useAllProductsQuery()
-	console.log(products)
 	if (isLoading) {
 		return <Loader />
 	}

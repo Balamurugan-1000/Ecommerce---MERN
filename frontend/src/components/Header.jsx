@@ -14,13 +14,17 @@ const Header = () => {
 	return (
 		<>
 			<div className="flex justify-around">
-				<div className="hidden xl:block">
-					<div className="grid grid-cols-2 gap-2  ml-[4rem] ">
-						{data.map((product) => (
-							<div className="" key={product._id}>
-								<SmallProduct product={product} />
-							</div>
-						))}
+				<div className="flex flex-col py-5">
+					<h1 className="ml-[20rem] mb-10 text-[2rem]">
+						Mostly LIked</h1>
+					<div className="hidden xl:block">
+						<div className="grid grid-cols-2 gap-2  ml-[4rem] ">
+							{data.map((product) => (
+								<div className="" key={product._id}>
+									<SmallProduct product={product} />
+								</div>
+							))}
+						</div>
 					</div>
 				</div>
 				<ProductCarousel />

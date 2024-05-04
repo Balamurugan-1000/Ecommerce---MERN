@@ -8,11 +8,8 @@ export const updateCart = state => {
 
 	state.shippingPrice = addDecimals(state.itemsPrice > 100 ? 0 : 10)
 
-	state.taxProice = addDecimals(Number(0.15 * state.itemsPrice).toFixed(2))
-	state.totalPrice = (
-		Number(state.itemsPrice) +
-		Number(state.shippingPrice) +
-		Number(state.taxPrice)
+	state.taxPrice = addDecimals(Number(0.15 * state.itemsPrice).toFixed(2))
+	state.totalPrice = (Number(state.itemsPrice) + Number(state.shippingPrice) + Number(state.taxPrice)
 	).toFixed(2)
 
 	localStorage.setItem('cart', JSON.stringify(state))

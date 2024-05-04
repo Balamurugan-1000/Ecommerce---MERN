@@ -65,6 +65,7 @@ const UpdateProducts = () => {
 			} else {
 				toast.success(`product Updated successfully`)
 				navigate('/admin/allproductslist')
+
 			}
 
 		} catch (error) {

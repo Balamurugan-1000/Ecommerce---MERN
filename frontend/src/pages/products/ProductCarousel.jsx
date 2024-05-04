@@ -16,9 +16,9 @@ import {
 const ProductCarousel = () => {
 
 	const { data: products, isLoading, error } = useGetTopProductsQuery()
-	console.log(products)
 	const settings = {
 		dots: false,
+
 		infinite: true,
 		speed: 500,
 		slidesToShow: 1,
@@ -28,15 +28,15 @@ const ProductCarousel = () => {
 		autoplaySpeed: 3000
 	}
 	return (
-		<div className="mb:4 md:block ">
+		<div className="overflow-hidden outline-none mb:4 md:block ">
 			{isLoading ? null : error ? (
 				<Message varient={'danger'}>
 					{error?.data?.message || error.message}
 				</Message>
-			) : <Slider {...settings} className="md:w-[48rem] xl:w-[45rem]  sm:w-[40rem] overflow-x-hidden  sm:block">
+			) : <Slider {...settings} className="md:w-[48rem] xl:w-[45rem] border-none focus:outline-none hover:outline-none  outline-none sm:w-[40rem] overflow-x-hidden  sm:block">
 				{products?.map(({ image, _id, name, description, price, brand, createdAt, numReviews, rating, quantity, countInStock }) => (
-					<div className="flex flex-col items-center justify-center max-w-full mx-auto text-center " key={_id}>
-						<img src={image} alt={name} className="max-w-full rounded-lg object-cover h-[25rem] overflow-x-hidden" />
+					<div className="flex flex-col items-center justify-center w-full mx-auto text-center rounded p-5z " key={_id}>
+						<img src={image} alt={name} className=" rounded-lg p-5 object-contain mx-auto h-[25rem] overflow-x-hidden" style={{ borderRadius: "3rem", width: "550px", outline: "0px" }} />
 						<div className="flex flex-row justify-between mt-[2rem]">
 							<div className="flex justify-center w-[20rem]">
 								<div className="one">

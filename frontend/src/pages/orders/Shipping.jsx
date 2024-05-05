@@ -38,19 +38,19 @@ const Shipping = () => {
 						<h1 className="p-3 mb-4 text-3xl font-semibold">Shipping</h1>
 						<div className="mb-4 ">
 							<label htmlFor="address" className="block mb-2 ">Address</label>
-							<input type="text" id="address" placeholder="Enter Address" value={address} onChange={(e) => setAddress(e.target.value)} className="w-full bg-[#101010] p-2 border rounded" required />
+							<input type="text" id="address" placeholder="Enter Address" value={address} onChange={(e) => setAddress(e.target.value)} className="w-full p-2 border rounded bg-primary" required />
 						</div>
 						<div className="mb-4 ">
 							<label htmlFor="city" className="block mb-2 ">City</label>
-							<input type="text" id="city" placeholder="Enter City" value={city} onChange={(e) => setCity(e.target.value)} className="w-full bg-[#101010] p-2 border rounded" required />
+							<input type="text" id="city" placeholder="Enter City" value={city} onChange={(e) => setCity(e.target.value)} className="w-full p-2 border rounded bg-primary" required />
 						</div>
 						<div className="mb-4 ">
 							<label htmlFor="postalCode" className="block mb-2 ">Postal Code</label>
-							<input type="text" id="postalCode" placeholder="Enter Postal Code" value={postalCode} onChange={(e) => setPostalCode(e.target.value)} className="w-full bg-[#101010] p-2 border rounded" required />
+							<input type="text" id="postalCode" placeholder="Enter Postal Code" value={postalCode} onChange={(e) => setPostalCode(e.target.value)} className="w-full p-2 border rounded bg-primary" required />
 						</div>
 						<div className="mb-4 ">
 							<label htmlFor="country" className="block mb-2 ">Country</label>
-							<input type="text" id="country" placeholder="Enter Country" value={country} onChange={(e) => setCountry(e.target.value)} className="w-full bg-[#101010]  p-2 border rounded" required />
+							<input type="text" id="country" placeholder="Enter Country" value={country} onChange={(e) => setCountry(e.target.value)} className="w-full p-2 border rounded bg-primary" required />
 						</div>
 						<div className="mb-4 ">
 							<label htmlFor="country" className="block mb-2 ">Payment Method</label>
@@ -59,7 +59,7 @@ const Shipping = () => {
 								<label htmlFor="paypal">PayPal</label>
 							</div>
 						</div>
-						<button type="submit" className="bg-[#00bfa6] text-white p-2 rounded w-full">Continue</button>
+						<button type="submit" className="w-full p-2 rounded-xl text-primary bg-coral-red ">Continue</button>
 
 					</form>
 

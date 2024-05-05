@@ -65,36 +65,36 @@ const Shop = () => {
 		<>
 			<div className="container mx-auto">
 				<div className="flex md:flex-row">
-					<div className="bg-[#151515] ml-12 p-3 my-2 ">
-						<h2 className="py-2 mb-2 text-center bg-black rounded-full ">Filter by categories</h2>
+					<div className="p-3 my-2 ml-12 text-slate-gray bg-primary ">
+						<h2 className="py-2 mb-2 font-bold text-center rounded-full bg-primary text-coral-red ">Filter by categories</h2>
 						<div className="py-5 w-[15rem]">
 							{categories?.map((c) => (
 								<div className="mb-2" key={c._id}>
 									<div className="flex items-center mr-4">
 										<input type="checkbox" id="red-checkbox" onChange={(e) => handleCheck(e.target.checked, c._id)}
-											className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-greenishBlueDark focus:ring-greenishBlueLight dark:focus:ring-greenishBlueDark dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+											className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-coral-red focus:ring-coral-red dark:focus:ring-coral-red dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
 
 										/>
-										<label htmlFor="pink-checkBox" className="ml-2 text-sm font-medium text-white dark:text-gray-300">{c.name}</label>
+										<label htmlFor="pink-checkBox" className="ml-2 text-sm font-medium text-slate-gray dark:text-gray-300">{c.name}</label>
 									</div>
 								</div>
 							))}
 						</div>
 
-						<h2 className="py-2 mb-2 text-center bg-black rounded-full h4">Filter by Brands</h2>
+						<h2 className="py-2 mb-2 font-bold text-center rounded-full text-coral-red bg-primary h4">Filter by Brands</h2>
 						<div className="p-5">
 							{uniqueBrand?.map((brand) => (
 								<div key={brand}>
 									<input type="radio" id={brand} name={"brand"} onChange={() => handleBrandClick(brand)}
-										className="w-4 h-4 bg-gray-100 border-gray-300 text-greenishBlueLight focus:ring-greenishBlueLight dark:focus:ring-greenishBlueDark dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+										className="w-4 h-4 bg-gray-100 border-gray-300 text-coral-red focus:ring-coral-red dark:focus:ring-coral-red dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
 									/>
-									<label htmlFor="pink-checkBox" className="ml-2 text-sm font-medium text-white dark:text-gray-300">{brand}</label>
+									<label htmlFor="pink-checkBox" className="ml-2 text-sm font-medium text-slate-gray dark:text-gray-300">{brand}</label>
 
 								</div>
 							))}
 						</div>
 
-						<h2 className="py-2 mb-2 text-center bg-black rounded-full h4">
+						<h2 className="py-2 mb-2 font-bold text-center rounded-full text-coral-red bg-primary h4">
 							Filer by Price
 						</h2>
 						<div className="px-5 py-2 w-[15rem]">
@@ -103,7 +103,7 @@ const Shop = () => {
 								placeholder="Enter minimum Price"
 								value={minpriceFilter}
 								onChange={handleMinPriceChange}
-								className="w-full px-3 py-2 placeholder-gray-400 bg-black border rounded-lg focus:outline-none focus:ring focus:border-greenishBlueWhite "
+								className="w-full px-3 py-2 placeholder-gray-400 border rounded-lg bg-primary focus:outline-none focus:ring focus:border-coral-red "
 							/>
 						</div>
 						<div className="px-5 py-2 w-[15rem]">
@@ -112,7 +112,7 @@ const Shop = () => {
 								placeholder="Enter maximum Price"
 								value={maxPriceFilter}
 								onChange={handlePriceChange}
-								className="w-full px-3 py-2 placeholder-gray-400 bg-black border rounded-lg focus:outline-none focus:ring focus:border-greenishBlueWhite "
+								className="w-full px-3 py-2 placeholder-gray-400 border rounded-lg bg-primary focus:outline-none focus:ring focus:border-coral-red "
 							/>
 						</div>
 						<div className="px-5 py-2 pt-0">
@@ -125,7 +125,7 @@ const Shop = () => {
 						</div>
 					</div>
 					<div className="p-3">
-						<h2 className="mb-2 text-center h4">{products?.length} Products</h2>
+						<h2 className="mb-2 font-bold text-center text-coral-red">{products?.length} Products  <span className="text-slate-gray">Available for shopping</span></h2>
 						<div className="flex flex-wrap gap-10">
 							{products.length === 0 ? (
 								<Loader />

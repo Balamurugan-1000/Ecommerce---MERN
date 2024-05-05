@@ -21,7 +21,7 @@ const Cart = () => {
 	return (
 		<>
 			<div className="container flex flex-wrap items-center justify-around mx-auto mt-8">
-				{cartItems.length === 0 ? (<div className="text-white"> Your Cart is empty  <Link to={'/shop'}>Go back to the Shop</Link></div>) : (<>
+				{cartItems.length === 0 ? (<div className="text-slate-gray"> Your Cart is empty  <Link to={'/shop'}>Go back to the Shop</Link></div>) : (<>
 					<div className="flex flex-col w-[80%]">
 						<h1 className="mb-4 text-2xl font-semibold ">Shopping Cart</h1>
 						{cartItems?.map((item) => (
@@ -30,13 +30,13 @@ const Cart = () => {
 									<img src={item.image} alt={item.name} className="object-cover w-full h-full rounded" />
 								</div>
 								<div className="flex-1 ml-4">
-									<Link to={`/product/${item._id}`} className="text-greenishBlueDark">{item.name}</Link>
-									<div className="mt-2 text-white"> {item.brand}</div>
-									<div className="mt-2 font-bold text-white"> Rs.{item.price}</div>
+									<Link to={`/product/${item._id}`} className="text-coral-red">{item.name}</Link>
+									<div className="mt-2 text-slate-gray"> {item.brand}</div>
+									<div className="mt-2 font-bold text-slate-gray"> Rs.{item.price}</div>
 								</div>
 								<div className="w-24">
-									<select className="w-full p-1 bg-black border rounded" value={item.qty} onChange={(e) => addToCartHandler(item, Number(e.target.value))}>{[...Array(item.countInStock).keys()].map((x) => (
-										<option className="text-white" value={x + 1} key={x + 1}>{x + 1}</option>
+									<select className="w-full p-1 border rounded bg-primary" value={item.qty} onChange={(e) => addToCartHandler(item, Number(e.target.value))}>{[...Array(item.countInStock).keys()].map((x) => (
+										<option className="text-slate-gray" value={x + 1} key={x + 1}>{x + 1}</option>
 									))}</select>
 								</div>
 								<div className="">
@@ -49,7 +49,7 @@ const Cart = () => {
 
 						<div className="mt-8 w-[40rem] ">
 							<div className="p-4 rounded-lg">
-								<h2 className="mb-2 text-xl font-semibold">
+								<h2 className="mb-2 text-xl font-semibold text-coral-red">
 									Items ({cartItems.reduce((acc, item) => acc + item.qty, 0)}){" "}
 								</h2>
 								<div className="text-2xl font-bold">
@@ -59,7 +59,7 @@ const Cart = () => {
 									}
 								</div>
 								<button
-									className="w-1/2 px-4 py-2 mt-4 text-lg rounded-full bg-greenishBlueDark"
+									className="w-1/2 px-4 py-2 mt-4 text-lg text-white rounded-full bg-coral-red"
 									disabled={cartItems.length === 0}
 									onClick={checkoutHandler}
 								>

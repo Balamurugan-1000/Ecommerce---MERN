@@ -43,47 +43,47 @@ const Profile = () => {
 	return (
 		<div className="container p-4 mx-auto mt-[5rem] ">
 			<div className="flex flex-col items-center justify-center md:space-x-4">
-				<h2 className="mb-4 text-2xl font-semibold text-white">
+				<h2 className="mb-4 text-2xl font-semibold text-coral-red ">
 					Update Profile
 				</h2>
 				<div className="md:w-1/3">
 					<form onSubmit={submitHandler}>
 						<div className="mb-4 ">
-							<label className="block mb-4 text-white">Name</label>
+							<label className="block mb-4 text-slate-gray">Name</label>
 							<input
 								type="text"
 								placeholder="Enter Name"
-								className="w-full p-4 text-xl  outline-none rounded-xl bg-[#0f0f0f]"
+								className="w-full p-4 text-xl bg-white outline-none rounded-xl"
 								value={username}
 								onChange={(e) => setUsername(e.target.value)}
 							/>
 						</div>
 						<div className="mb-4 ">
-							<label className="block mb-4 text-white">Email</label>
+							<label className="block mb-4 text-slate-gray">Email</label>
 							<input
 								type="email"
 								placeholder="Enter Email"
-								className="w-full p-4 text-xl  outline-none rounded-xl bg-[#0f0f0f]"
+								className="w-full p-4 text-xl bg-white outline-none rounded-xl"
 								value={email}
 								onChange={(e) => setEmail(e.target.value)}
 							/>
 						</div>
 						<div className="mb-4 ">
-							<label className="block mb-4 text-white">Password</label>
+							<label className="block mb-4 text-slate-gray">Password</label>
 							<input
 								type="password"
 								placeholder="Enter Password"
-								className="w-full p-4 text-xl  outline-none rounded-xl bg-[#0f0f0f]"
+								className="w-full p-4 text-xl bg-white outline-none rounded-xl"
 								value={password}
 								onChange={(e) => setPassword(e.target.value)}
 							/>
 						</div>
 						<div className="mb-4 ">
-							<label className="block mb-4 text-white">Confirm password</label>
+							<label className="block mb-4 text-slate-gray">Confirm password</label>
 							<input
 								type="password"
 								placeholder="Confirm your password"
-								className="w-full p-4 text-xl  outline-none rounded-xl bg-[#0f0f0f]"
+								className="w-full p-4 text-xl bg-white outline-none rounded-xl"
 								value={retypePassword}
 								onChange={(e) => setRetypePassword(e.target.value)}
 							/>
@@ -92,14 +92,14 @@ const Profile = () => {
 							<button
 								type="submit"
 								onClick={submitHandler}
-								className="bg-[#17f0d3] text-white py-2 px-4 rounded hover:bg-[#14ceb5]"
+								className="px-4 py-2 text-white rounded bg-coral-red"
 							>
 								Update
 							</button>
 
 							<Link
 								to={"/user-orders"}
-								className="bg-[#14ceb5] text-white py-2 px-4 rounded hover:bg-[#11af9a]"
+								className="px-4 py-2 text-white rounded bg-coral-red "
 							>
 								My orders
 							</Link>

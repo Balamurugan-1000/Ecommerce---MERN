@@ -12,10 +12,10 @@ const ProductCard = ({ p }) => {
 	};
 
 	return (
-		<div className="lg:w-[260px] sm:w-[300px] overflow-hidden  relative bg-[#1A1A1A]   rounded-lg shaodw dark:bg-gray-800 dark:border-gray-700">
+		<div className="lg:w-[260px] sm:w-[300px] overflow-hidden  relative bg-primary   rounded-lg shadow-3xl">
 			<section className="relative">
 				<Link to={`/product/${p._id}`}>
-					<span className="absolute bottom-3 right-3 bg-emerald-50 text-greenishBlueDark text-sm font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-pink-900 dark:text-greewhring-greenishBlueWhite">
+					<span className="absolute bottom-3 right-3 bg-emerald-50 text-coral-red text-sm font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-pink-900 dark:text-greewhring-coral-red">
 						{p?.brand}
 					</span>
 					<img
@@ -30,12 +30,12 @@ const ProductCard = ({ p }) => {
 
 			<div className="p-5">
 				<div className="flex justify-between">
-					<h5 className="mb-2 text-xl text-whiet dark:text-white">{p?.name}</h5>
+					<h5 className="mb-2 text-xl text-whiet dark:text-slate-gray">{p?.name}</h5>
 
-					<p className="font-semibold text-greenishBlueDark text-">
+					<p className="font-semibold text-coral-red text-">
 						{p?.price?.toLocaleString("en-US", {
 							style: "currency",
-							currency: "INR",
+							currency: "USD",
 						})}
 					</p>
 				</div>
@@ -47,7 +47,7 @@ const ProductCard = ({ p }) => {
 				<section className="flex items-center justify-between">
 					<Link
 						to={`/product/${p._id}`}
-						className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-greenishBlueDark hover:bg-greenishBlueDark focus:ring-4 focus:outline-none focus:ring-greenishBlueWhite dark:bg-greenishBlueLight dark:hover:bg-greenishBlueDark dark:focus:ring-greenishBlueDark"
+						className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-coral-red hover:bg-coral-red focus:ring-4 focus:outline-none focus:ring-coral-red dark:bg-coral-red dark:hover:bg-coral-red dark:focus:ring-coral-red"
 					>
 						Read More
 						<svg

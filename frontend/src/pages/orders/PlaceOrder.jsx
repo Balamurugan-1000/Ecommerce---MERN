@@ -91,8 +91,8 @@ const PlaceOrder = () => {
 						</table >
 						{isLoading && <Loader />}
 						<div className="flex flex-col items-center justify-center">
-							<h2 className=' mt-[2rem] text-2xl font-semibold '>Order summary</h2><hr />
-							<div className="flex mx-auto gap-[4rem] bg-[#181818] justify-between   max-w-[100rem] ">
+							<h2 className=' mt-[2rem] text-coral-red text-2xl font-semibold '>Order summary</h2><hr />
+							<div className="flex mx-auto gap-[4rem] bg-primary justify-between   max-w-[100rem] ">
 								<div className="m-8">
 
 									<h2 className='p-2 mb-4 text-2xl font-semibold '>Price Details</h2>
@@ -117,7 +117,7 @@ const PlaceOrder = () => {
 
 								</div>
 								<div className="m-8">
-									<h2 className='p-2 mb-4 text-2xl font-semibold '>Shipping</h2>
+									<h2 className='p-2 mb-4 text-2xl font-semibold text-coral-red '>Shipping</h2>
 									<hr className='mb-3' />
 									<p className='p-1'>{cart.shippingAddress.address}</p>
 									<p className='p-1'>{cart.shippingAddress.city}</p>
@@ -133,7 +133,7 @@ const PlaceOrder = () => {
 							<div className="m-8 ">
 								<button
 									type='submit'
-									className="w-[10rem] p-2 text-white bg-greenishBlueDark rounded-md"
+									className="w-[10rem] p-2 text-white bg-coral-red rounded-md"
 									onClick={placeOrderHandler}
 								>
 									Place Order

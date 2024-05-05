@@ -6,7 +6,7 @@ const ProgressStep = ({ step1, step2, step3 }) => {
 			{/* //progress bar with check mark for 3 steps  with title*/}
 			<div className="flex items-center">
 				<div className={`w-6 mr-2 h-6 flex items-center justify-center rounded-full border-2 border-black ${step1 ? "bg-green-500" : "bg-white"}`}>
-					{step1 && <span className="text-white"></span>}
+					{step1 && <span className="text-slate-gray"></span>}
 				</div>
 				<p className="text-sm font-semibold">Sign In</p>
 
@@ -23,7 +23,7 @@ const ProgressStep = ({ step1, step2, step3 }) => {
 
 			<div className="flex items-center">
 				<div className={`w-6 mr-2 h-6 flex items-center justify-center rounded-full border-2 border-black ${step2 ? "bg-green-500" : "bg-white"}`}>
-					{step2 && <span className="text-white"></span>}
+					{step2 && <span className="text-slate-gray"></span>}
 				</div>
 				<p className="text-sm font-semibold">Shipping</p>
 				<div className="flex items-center">
@@ -35,7 +35,7 @@ const ProgressStep = ({ step1, step2, step3 }) => {
 			</div>
 			<div className="flex items-center">
 				<div className={`w-6 mr-2 h-6 flex items-center justify-center rounded-full border-2 border-black ${step3 ? "bg-green-500" : "bg-white"}`}>
-					{step3 && <span className="text-white"></span>}
+					{step3 && <span className="text-slate-gray"></span>}
 				</div>
 				<p className="text-sm font-semibold">Payment</p>
 			</div>

@@ -13,10 +13,10 @@ const Header = () => {
 	}
 	return (
 		<>
-			<div className="flex justify-around">
-				<div className="flex flex-col py-5">
-					<h1 className="ml-[20rem] mb-10 text-[2rem]">
-						Mostly LIked</h1>
+			<div className="box-border flex justify-around bg-primary text-slate-gray">
+				<div className="flex flex-col py-5 sm:hidden xl:block">
+					<h1 className="ml-[20rem]  font-bold mb-10 text-[2rem]">
+						Mostly Liked</h1>
 					<div className="hidden xl:block">
 						<div className="grid grid-cols-2 gap-2  ml-[4rem] ">
 							{data.map((product) => (

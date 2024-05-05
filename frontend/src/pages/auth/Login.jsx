@@ -39,19 +39,19 @@ const Login = () => {
 	return (
 		<div>
 			<section className="pl-[10rem] container lg:flex grid place-content-center min-w-[100vw] flex-row-reverse gap-10 ">
-				<div className="mr-[4rem] ml-[-4rem] lg:ml-[2rem] mt-[5rem] min-h-[20rem] w-[70vw] lg:w-[45vw] hover:shadow-[0px_20px_37px_18px_#b2f5ea]  transition-shadow delay-[500ms] pl-5 ease-linear py-8 rounded-xl">
-					<h1 className="mb-4 text-5xl  font-semibold text-[#17f0d3]">
+				<div className="mr-[4rem] ml-[-4rem] lg:ml-[2rem] mt-[5rem] min-h-[20rem] w-[70vw] lg:w-[45vw] shadow-3xl  transition-shadow delay-[500ms] pl-5 ease-linear py-8 rounded-xl">
+					<h1 className="mb-4 text-5xl font-semibold text-coral-red">
 						Sign In
 					</h1>
 					<form
 						action=""
-						className="container max-w-[40rem] text-black "
+						className="container max-w-[40rem] text-slate-gray "
 						onSubmit={submitHandler}
 					>
 						<div className="my-[2rem] ">
 							<label
 								htmlFor="email"
-								className="block text-sm font-medium text-white"
+								className="block text-sm font-medium text-slate-gray"
 							>
 								{" "}
 								Email
@@ -59,7 +59,7 @@ const Login = () => {
 							<input
 								type="email"
 								placeholder="Enter your Email..."
-								className="w-3/5 p-2 mt-1 text-sm text-black border rounded outline-none"
+								className="w-3/5 p-2 mt-1 text-sm border rounded outline-none text-slate-gray"
 								value={email}
 								onChange={(e) => setEmail(e.target.value)}
 							/>
@@ -67,7 +67,7 @@ const Login = () => {
 						<div className="my-[2rem]">
 							<label
 								htmlFor="password"
-								className="block text-sm font-medium text-white"
+								className="block text-sm font-medium text-slate-gray"
 							>
 								{" "}
 								password
@@ -76,7 +76,7 @@ const Login = () => {
 								placeholder="Enter your password"
 								type="password"
 								id="password"
-								className="w-3/5 p-2 mt-1 text-black border rounded outline-none"
+								className="w-3/5 p-2 mt-1 border rounded outline-none text-slate-gray"
 								value={password}
 								onChange={(e) => setPassword(e.target.value)}
 							/>
@@ -84,7 +84,7 @@ const Login = () => {
 						<button
 							disabled={isLoading}
 							type="submit"
-							className="px-4 py-2 text-white bg-[#17f0d3] rounded cursor-pointer my-[1rem]"
+							className="px-4 py-2 text-white bg-coral-red rounded cursor-pointer my-[1rem]"
 						>
 							{isLoading ? "Signing In..." : "Sign In"}
 						</button>
@@ -92,11 +92,11 @@ const Login = () => {
 						{isLoading && <Loader />}
 					</form>
 					<div className="mt-4 ">
-						<p className="text-white">
+						<p className="text-slate-gray">
 							New Customer ?
 							<Link
 								to={redirect ? `/register?redirect=${redirect}` : "/register"}
-								className="text-[#17f0d3]"
+								className="text-coral-red"
 							>
 								Register
 							</Link>

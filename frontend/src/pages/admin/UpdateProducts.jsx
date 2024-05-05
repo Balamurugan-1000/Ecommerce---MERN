@@ -88,7 +88,7 @@ const UpdateProducts = () => {
 		}
 	}
 	return (
-		<div className="container xl:mx-[9rem] sm:mx-[0rem] text-white overflow-auto">
+		<div className="container xl:mx-[9rem] sm:mx-[0rem] text-slate-gray overflow-auto">
 			<div className="flex flex-col overflow-auto md:flex-row">
 				<AdminMenu />
 				<div className="p-3 md:w-3/4">
@@ -107,7 +107,7 @@ const UpdateProducts = () => {
 								onChange={(e) => {
 									uploadFileHandler(e)
 								}}
-								className={`${!image ? "hidden" : "text-white"}`}
+								className={`${!image ? "hidden" : "text-slate-gray"}`}
 							/>
 						</label>
 					</div>
@@ -116,13 +116,13 @@ const UpdateProducts = () => {
 						<div className="flex flex-wrap justify-center md:justify-normal gap-11">
 							<div className="one">
 								<label className="text-[#14ceb5]" htmlFor="name">Name</label><br />
-								<input type="text" value={name} className="p-4 mb-3 w-[25rem] border rounded-lg bg-[#101011] text-white"
+								<input type="text" value={name} className="p-4 mb-3 w-[25rem] border rounded-lg bg-[#101011] text-slate-gray"
 									onChange={e => setName(e.target.value)}
 								/>
 							</div>
 							<div className=" two">
 								<label className="text-[#14ceb5]" htmlFor="name block">Price</label><br />
-								<input type="number" value={price} className="p-4 mb-3 w-[25rem] border rounded-lg bg-[#101011] text-white"
+								<input type="number" value={price} className="p-4 mb-3 w-[25rem] border rounded-lg bg-[#101011] text-slate-gray"
 									onChange={e => setPrice(e.target.value)}
 								/>
 							</div>
@@ -130,13 +130,13 @@ const UpdateProducts = () => {
 						<div className="flex flex-wrap justify-center md:justify-normal gap-11 ">
 							<div className="one">
 								<label className="text-[#14ceb5]" htmlFor="name block">Quantity</label><br />
-								<input type="number" value={quantity} className="p-4 mb-3 w-[25rem] border rounded-lg bg-[#101011] text-white"
+								<input type="number" value={quantity} className="p-4 mb-3 w-[25rem] border rounded-lg bg-[#101011] text-slate-gray"
 									onChange={e => setQuantity(e.target.value)}
 								/>
 							</div>
 							<div className=" two">
 								<label className="text-[#14ceb5]" htmlFor="name block">Brand</label><br />
-								<input type="text" value={brand} className="p-4 mb-3 w-[25rem] border rounded-lg bg-[#101011] text-white"
+								<input type="text" value={brand} className="p-4 mb-3 w-[25rem] border rounded-lg bg-[#101011] text-slate-gray"
 									onChange={e => setBrand(e.target.value)}
 								/>
 							</div>
@@ -144,20 +144,20 @@ const UpdateProducts = () => {
 						<div className="flex flex-wrap justify-center md:justify-normal gap-11 ">
 							<div className="flex flex-col one">
 								<label htmlFor="" className="text-[#14ceb5] mt-5">Description</label>
-								<textarea className="p-2 mb-3  bg-[#101011] text-white border rounded-lg xl:w-[53rem] w-[25rem]  " value={description}
+								<textarea className="p-2 mb-3  bg-[#101011] text-slate-gray border rounded-lg xl:w-[53rem] w-[25rem]  " value={description}
 									onChange={e => setDescription(e.target.value)}></textarea>
 							</div>
 						</div>
 						<div className="flex flex-wrap justify-center md:justify-normal gap-11 ">
 							<div className="one">
 								<label className="text-[#14ceb5]" htmlFor="name block">Stock</label><br />
-								<input type="number" value={stock} className="p-4 mb-3 w-[25rem] border rounded-lg bg-[#101011] text-white"
+								<input type="number" value={stock} className="p-4 mb-3 w-[25rem] border rounded-lg bg-[#101011] text-slate-gray"
 									onChange={e => setStock(e.target.value)}
 								/>
 							</div>
 							<div className=" two">
 								<label htmlFor="name block" className="text-[#14ceb5]">Category</label><br />
-								<select placeholder="Choose category" className="p-4 mb-3 w-[25rem] border rounded-lg bg-[#101011] text-white"
+								<select placeholder="Choose category" className="p-4 mb-3 w-[25rem] border rounded-lg bg-[#101011] text-slate-gray"
 									value={category}
 									onChange={(e) => setCategory(e.target.value)}
 								>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Ratings from './Ratings'
@@ -15,15 +15,17 @@ const ProductTabs = ({
 	setComment,
 	product
 }) => {
-	const { data, isLoading } = useGetTopProductsQuery()
+	const { data, isLoading, refetch } = useGetTopProductsQuery()
 	const [activeTab, setActiveTab] = useState(1)
-
+	useEffect(() => {
+		refetch()
+	}, [activeTab, data])
 	const HandleTabClick = (tabNumber) => {
 		setActiveTab(tabNumber)
 	}
 	if (isLoading) return <Loader />
 	return (
-		<div className='flex flex-col md:flex-row'>
+		<div className='flex flex-col ml-0 border md:flex-row '>
 			<section className='mr-[5rem]'>
 				<div className={`flex-1 p-4 cursor-pointer text-lg ${activeTab == 1 ? 'font-bold' : 'text-gray-400'}`} onClick={() => HandleTabClick(1)}>
 					Write Your Review
@@ -56,7 +58,7 @@ const ProductTabs = ({
 										required
 										value={rating}
 										onChange={(e) => setRating(e.target.value)}
-										className="p-2 border rounded-lg xl:w-[40rem] text-black"
+										className="p-2 border rounded-lg xl:w-[40rem] text-slate-gray"
 									>
 										<option value="">Select</option>
 										<option value="1">Inferior</option>
@@ -78,18 +80,18 @@ const ProductTabs = ({
 										required
 										value={comment}
 										onChange={(e) => setComment(e.target.value)}
-										className="p-2 border rounded-lg xl:w-[40rem] text-black"
+										className="p-2 border rounded-lg xl:w-[40rem] text-slate-gray"
 									></textarea>
 								</div>
 								<button
 									type="submit"
-									// disabled={loadingProductReview}
+									disabled={loadingProductReview}
 
 									onClick={(e) => {
 										e.preventDefault()
 										submitHandler(e)
 									}}
-									className="px-4 py-2 text-white rounded-lg bg-greenishBlueDark"
+									className="px-4 py-2 text-white rounded-lg bg-coral-red"
 								>
 									Submit
 								</button>
@@ -112,10 +114,10 @@ const ProductTabs = ({
 							{product.reviews.map((review) => (
 								<div
 									key={review._id}
-									className="bg-[#1A1A1A] p-4 rounded-lg xl:ml-[2rem] sm:ml-[0rem] xl:w-[50rem] sm:w-[24rem] mb-5"
+									className="bg-white p-4 rounded-lg xl:ml-[2rem] sm:ml-[0rem] xl:w-[50rem] sm:w-[24rem] mb-5"
 								>
 									<div className="flex justify-between">
-										<strong className="text-[#B0B0B0]">{review.name}</strong>
+										<strong className="text-coral-red font-xl">{review.name}</strong>
 										<p className="text-[#B0B0B0]">
 											{review.createdAt.substring(0, 10)}
 										</p>

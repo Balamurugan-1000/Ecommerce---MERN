@@ -44,9 +44,9 @@ const Register = () => {
 
 	return (
 		<section className="pl-[10rem]  max-h-[85vh] mt-[1rem] lg:flex grid place-content-center min-w-[85vw] flex-row-reverse  justify-between">
-			<div className="mr-[4rem] lg:justify-between max-h-[75vh] ml-[-4rem] lg:ml-[4rem] mt-[3rem] min-h-[16rem]  max-w-[70vw] min-w-[70vw] lg:min-w-[45vw] hover:shadow-[0px_20px_37px_18px_#b2f5ea]  transition-shadow delay-[500ms] pl-5 ease-linear py-10 pb-16 rounded-xl  lg:min-h-[80vh]">
+			<div className="mr-[4rem] lg:justify-between max-h-[75vh] ml-[-4rem] lg:ml-[4rem] mt-[3rem] min-h-[16rem]  max-w-[70vw] min-w-[70vw] lg:min-w-[45vw] shadow-3xl pl-5 ease-linear py-10 pb-16 rounded-xl  lg:min-h-[80vh]">
 
-				<h1 className="mb-4 text-5xl text-center  font-semibold text-[#17f0d3]">
+				<h1 className="mb-4 text-5xl font-semibold text-center text-coral-red">
 					Register
 				</h1>
 				<form className="max-w-md mx-auto"
@@ -56,7 +56,7 @@ const Register = () => {
 						<div className="my-[1rem]">
 							<label
 								htmlFor="name"
-								className="block text-sm font-medium text-white"
+								className="block text-sm font-medium text-slate-gray"
 							>
 								Name
 							</label>
@@ -72,7 +72,7 @@ const Register = () => {
 						</div>
 						<label
 							htmlFor="email"
-							className="block text-sm font-medium text-white"
+							className="block text-sm font-medium text-slate-gray"
 						>
 							Email
 						</label>
@@ -80,7 +80,7 @@ const Register = () => {
 							type="email"
 							name="email"
 							id="email"
-							className="w-3/4 p-2 mt-1 text-sm text-black bg-white border rounded outline-none"
+							className="w-3/4 p-2 mt-1 text-sm bg-white border rounded outline-none text-slate-gray"
 							placeholder="Enter your Email"
 							value={email}
 							onChange={(e) => setEmail(e.target.value)}
@@ -89,7 +89,7 @@ const Register = () => {
 					<div className="my-[1rem]">
 						<label
 							htmlFor="password"
-							className="block text-sm font-medium text-white"
+							className="block text-sm font-medium text-slate-gray"
 						>
 							Password
 						</label>
@@ -97,7 +97,7 @@ const Register = () => {
 							type="password"
 							name="password"
 							id="password"
-							className="w-3/4 p-2 mt-1 text-sm text-black bg-white border rounded outline-none"
+							className="w-3/4 p-2 mt-1 text-sm bg-white border rounded outline-none text-slate-gray"
 							placeholder="Enter your Password"
 							value={password}
 							onChange={(e) => setPassword(e.target.value)}
@@ -105,7 +105,7 @@ const Register = () => {
 						<div className="my-[1rem]">
 							<label
 								htmlFor="retypePassword"
-								className="block text-sm font-medium text-white"
+								className="block text-sm font-medium text-slate-gray"
 							>
 								retypePassword
 							</label>
@@ -113,7 +113,7 @@ const Register = () => {
 								type="password"
 								name="retypePassword"
 								id="retypePassword"
-								className="w-3/4 p-2 mt-1 text-sm text-black bg-white border rounded outline-none"
+								className="w-3/4 p-2 mt-1 text-sm bg-white border rounded outline-none text-slate-gray"
 								placeholder="Confirm Your Password"
 								value={retypePassword}
 								onChange={(e) => setRetypePassword(e.target.value)}
@@ -121,7 +121,7 @@ const Register = () => {
 						</div>
 					</div>
 					<button
-						className="bg-[#17f0d3] text-white px-4 py-2 rounded cursor-pointer my-[1rem]"
+						className="bg-coral-red text-white px-4 py-2 rounded cursor-pointer my-[1rem]"
 						disabled={isLoading}
 						type="submit"
 					>
@@ -129,10 +129,10 @@ const Register = () => {
 					</button>
 				</form>
 				<div className="flex gap-1 mt-0 text-[10px] text-wrap lg:text-[15px]">
-					<p className="text-white">Already have an account ?</p>
+					<p className="text-slate-gray">Already have an account ?</p>
 					<Link
 						to={redirect ? `/login?redirect=${redirect}` : "/login"}
-						className="text-[#17f0d3]"
+						className="text-coral-red"
 					>
 						Login
 					</Link>
@@ -152,13 +152,13 @@ const Register = () => {
 
 export default Register;
 {/* 
-<form className="container max-w-[40rem] text-black "
+<form className="container max-w-[40rem] text-slate-gray "
 					onSubmit={registerHandler}>
 					<div className="">
 						<div className="my-[1rem]">
 							<label
 								htmlFor="name"
-								className="block text-sm font-medium text-white"
+								className="block text-sm font-medium text-slate-gray"
 							>
 								Name
 							</label>
@@ -166,7 +166,7 @@ export default Register;
 								type="text"
 								name="name"
 								id="name"
-								className="w-3/4 p-2 mt-1 text-sm text-black bg-white border rounded outline-none"
+								className="w-3/4 p-2 mt-1 text-sm bg-white border rounded outline-none text-slate-gray"
 								placeholder="Enter your name"
 								value={username}
 								onChange={(e) => setUsername(e.target.value)}
@@ -175,7 +175,7 @@ export default Register;
 						<div className="my-[1rem]">
 							<label
 								htmlFor="email"
-								className="block text-sm font-medium text-white"
+								className="block text-sm font-medium text-slate-gray"
 							>
 								Email
 							</label>
@@ -183,7 +183,7 @@ export default Register;
 								type="email"
 								name="email"
 								id="email"
-								className="w-3/4 p-2 mt-1 text-sm text-black border rounded outline-none bg-[#0f0f0f]"
+								className="w-3/4 p-2 mt-1 text-sm text-slate-gray border rounded outline-none bg-[#0f0f0f]"
 								placeholder="Enter your Email"
 								value={email}
 								onChange={(e) => setEmail(e.target.value)}
@@ -192,7 +192,7 @@ export default Register;
 						<div className="my-[1rem]">
 							<label
 								htmlFor="password"
-								className="block text-sm font-medium text-white"
+								className="block text-sm font-medium text-slate-gray"
 							>
 								Password
 							</label>
@@ -200,7 +200,7 @@ export default Register;
 								type="password"
 								name="password"
 								id="password"
-								className="w-3/4 p-2 mt-1 text-sm text-black border rounded outline-none bg-[#0f0f0f]"
+								className="w-3/4 p-2 mt-1 text-sm text-slate-gray border rounded outline-none bg-[#0f0f0f]"
 								placeholder="Enter your Password"
 								value={password}
 								onChange={(e) => setPassword(e.target.value)}
@@ -208,7 +208,7 @@ export default Register;
 							<div className="my-[1rem]">
 								<label
 									htmlFor="retypePassword"
-									className="block text-sm font-medium text-white"
+									className="block text-sm font-medium text-slate-gray"
 								>
 									retypePassword
 								</label>
@@ -216,7 +216,7 @@ export default Register;
 									type="retypePassword"
 									name="retypePassword"
 									id="retypePassword"
-									className="w-3/4 p-2 mt-1 text-sm text-black border rounded outline-none bg-[#0f0f0f]"
+									className="w-3/4 p-2 mt-1 text-sm text-slate-gray border rounded outline-none bg-[#0f0f0f]"
 									placeholder="Confirm Your Password"
 									value={retypePassword}
 									onChange={(e) => setRetypePassword(e.target.value)}
@@ -225,7 +225,7 @@ export default Register;
 						</div>
 					</div>
 					<button
-						className="bg-[#17f0d3] text-white px-4 py-2 rounded cursor-pointer my-[1rem]"
+						className="bg-cotext-coral-red text-slate-gray px-4 py-2 rounded cursor-pointer my-[1rem]"
 						disabled={isLoading}
 						type="submit"
 					>

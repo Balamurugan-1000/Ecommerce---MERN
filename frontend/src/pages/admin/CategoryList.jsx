@@ -91,17 +91,17 @@ const categoryList = () => {
 
 	}
 	return (
-		<div className='ml-[10rem] flex flex-col bg-[#0a0a0a] md:flex-row'>
+		<div className='ml-[10rem] flex flex-col bg-primary md:flex-row'>
 			<AdminMenu />
 			<div className="p-3 md:3/4">
-				<div className="h-12 text-white">Manage Categories</div>
+				<div className="h-12 text-xl font-bold text-coral-red ">Manage Categories</div>
 				<CategoryForm value={name} setValue={setName} handleSubmit={handleCreateCategory} />
 				<br />
 				<hr />
 				<div className="flex flex-wrap">
 					{categories?.map(category => (
 						<div className="" key={category._id}>
-							<button className='px-4 py-2 m-3 text-[#3ec3b1] bg-[black] border border-[#3ec3b1] rounded-lg hover:bg-[#3ec3b1] hover:text-white focus:outline-none foucs:ring-2 focus:ring-[#3ec3b1] focus:ring-opacity-50' onClick={() => {
+							<button className='px-4 py-2 m-3 bg-white border rounded-lg text-coral-red border-coratext-coral-red hover:bg-coratext-coral-red hover:text-slate-gray focus:outline-none foucs:ring-2 focus:ring-coratext-coral-red focus:ring-opacity-50' onClick={() => {
 								setModelVisible(true)
 								setSelectCategory(category)
 								setUpdateName(category.name)

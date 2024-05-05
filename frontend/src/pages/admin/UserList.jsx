@@ -61,7 +61,7 @@ const UserList = () => {
 			{isLoading ? (<Loader />) : error ? (<Message varient={'danger'}>
 				{error?.data.message || error.message}
 			</Message>) : (
-				<div className="flex flex-col text-white">
+				<div className="flex flex-col text-slate-gray">
 					<AdminMenu />
 					<h1 className="w-full mb-8 text-4xl font-semibold text-center">Users</h1>
 
@@ -85,14 +85,14 @@ const UserList = () => {
 										<td className="px-4 py-2">
 											{editableUserId === user._id ? (
 												<div className="flex items-center">
-													<input type="text" value={editableUserName} onChange={e => setEditableUserName(e.target.value)} className="w-full p-2 text-black border rounded-lg" />
+													<input type="text" value={editableUserName} onChange={e => setEditableUserName(e.target.value)} className="w-full p-2 text-white border rounded-lg" />
 													<button onClick={() => updateHandler(user._id)} className="px-4 py-2 ml-2 text-white bg-blue-500 rounded-lg"><FaCheck /></button>
 												</div>
 											) : (
 												<div className="flex items-center">
 													{user.username} {" "}
 													<button onClick={() => toggleEdit(user)}>
-														<FaEdit className="ml-[1rem]" />
+														<FaEdit className="text-blue-400 ml-[1rem]" />
 													</button>
 												</div>
 											)}
@@ -100,14 +100,14 @@ const UserList = () => {
 										<td className="px-4 py-2">
 											{editableUserId === user._id ? (
 												<div className="flex items-center">
-													<input type="text" value={editableUserEmail} onChange={e => setEditableUserEmail(e.target.value)} className="w-full p-2 text-black border rounded-lg" />
+													<input type="text" value={editableUserEmail} onChange={e => setEditableUserEmail(e.target.value)} className="w-full p-2 text-white border rounded-lg" />
 													<button onClick={() => updateHandler(user._id)} className="px-4 py-2 ml-2 text-white bg-blue-500 rounded-lg"><FaCheck /></button>
 												</div>
 											) : (
 												<div className="flex items-center">
 													<p>{user.email} </p>
 													<button onClick={() => toggleEdit(user)}>
-														<FaEdit className="ml-[1rem]" />
+														<FaEdit className="text-blue-400 ml-[1rem]" />
 													</button>
 												</div>
 											)}
@@ -131,7 +131,7 @@ const UserList = () => {
 												<div className="flex items-center">
 													<p>{user.isadmin ? <FaCheck className="text-green-500" /> : <FaTimes className="text-red-500" />} </p>
 													<button onClick={() => toggleEdit(user)}>
-														<FaEdit className="ml-[1rem]" />
+														<FaEdit className="text-blue-400 ml-[1rem]" />
 													</button>
 												</div>
 											)}
@@ -140,7 +140,7 @@ const UserList = () => {
 											{!user.isadmin &&
 												(
 													<div className="flex ">
-														<button className="p-2 ml-2 font-bold bg-red-500 rounded-md hover:bg-red-600" onClick={() => deleteHandler(user)}><FaTrash /></button>
+														<button className="p-2 ml-2 font-bold bg-red-500 rounded-md hover:bg-red-600" onClick={() => deleteHandler(user)}><FaTrash className="text-white" /></button>
 													</div>
 												)
 											}

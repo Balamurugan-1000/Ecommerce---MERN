@@ -3,7 +3,7 @@ import Product from "./Product"
 const Favorites = () => {
 	const favorites = useSelector(state => state.favorites)
 	return (
-		<div className="ml-[10rem]">
+		<div className="ml-[10rem] bg-primary">
 			<h1 className="text-xl p-5 font-bold ml-[3rem] mt-[3rem]">
 				FAVORITE PRODUCT
 			</h1>

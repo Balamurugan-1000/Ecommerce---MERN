@@ -52,7 +52,7 @@ const ProductDetails = () => {
 	return (
 		<>
 			<div className="">
-				<Link to={'/'} className="font-semibold text-white hover:underline ml-[10rem]">Go Back</Link>
+				<Link to={'/'} className="font-semibold text-slate-gray hover:underline ml-[10rem]">Go Back</Link>
 			</div>
 			{isLoading ? <Loader /> : error ? (<Message varient={'danger'}>
 				{error?.data.message || error.message}</Message>) : (
@@ -66,27 +66,27 @@ const ProductDetails = () => {
 						<div className="flex flex-col justify-between ">
 							<h2 className="text-2xl font-semibold">{product.name}</h2>
 							<p className="my-4 xl:w-[35rem] lg:w-[35rem] md:w-[30rem] text-sm text-[#b0b0b0]">{product.description}</p>
-							<p className="my-4 text-3xl font-extrabold text-greenishBlueLight "><span className="text-white">Rs{"  "}</span>{product.price}/-</p>
+							<p className="my-4 text-3xl font-extrabold text-coral-red "><span className="text-slate-gray">Rs{"  "}</span>{product.price}/-</p>
 							<div className="flex justify-evenly mr-12 w-[20rem]">
 								<div className="one ">
-									<h1 className="flex items-center mb-3 w-[20rem]">
+									<h1 className="text-slate-gray flex items-center mb-3 w-[20rem]">
 										<FaStore className="mr-2 mt-[-8px]" /> Brand : {product.brand}
 									</h1>
-									<h1 className="flex items-center mb-3 w-[13rem]">
+									<h1 className="text-slate-gray flex items-center mb-3 w-[13rem]">
 										<FaClock className="mr-2 mt-[-8px]" /> Added : {moment(product.createdAt).fromNow()}
 									</h1>
-									<h1 className="flex items-center mb-3 w-[13rem]">
+									<h1 className="text-slate-gray flex items-center mb-3 w-[13rem]">
 										<FaStar className="mr-2 mt-[-8px]" /> Reviews : {product.numReviews}
 									</h1>
 								</div>
 								<div className="two">
-									<h1 className="flex items-center mb-3 w-[13rem]">
+									<h1 className="text-slate-gray flex items-center mb-3 w-[13rem]">
 										<FaStar className="mr-2 mt-[-8px]" /> Ratings : {(product.rating)}
 									</h1>
-									<h1 className="flex items-center mb-3 w-[13rem]">
+									<h1 className="text-slate-gray flex items-center mb-3 w-[13rem]">
 										<FaShoppingCart className="mr-2 mt-[-8px]" /> Quantity : {product.quantity}
 									</h1>
-									<h1 className="flex items-center mb-3 w-[13rem] overflow-auto">
+									<h1 className="text-slate-gray flex items-center mb-3 w-[13rem] overflow-auto">
 										<FaBox className="mr-2 mt-[-8px]" /> CountInStock : {product.countInStock}
 									</h1>
 								</div>
@@ -98,7 +98,7 @@ const ProductDetails = () => {
 								<Ratings value={product.rating} text={`${product.numReviews} reviews`} />
 								{product.countInStock > 0 && (
 									<div className="">
-										<select value={qty} onChange={(e) => setQty(e.target.value)} className="p-2 w-[6rem] text-black rounded-lg">{[...Array(product.countInStock).keys()].map(x => (
+										<select value={qty} onChange={(e) => setQty(e.target.value)} className="p-2 w-[6rem] text-slate-gray rounded-lg">{[...Array(product.countInStock).keys()].map(x => (
 											<option key={x + 1} value={x + 1}>{x + 1}</option>
 										))}</select>
 									</div>
@@ -108,14 +108,14 @@ const ProductDetails = () => {
 							<div className="btn-container">
 								<button
 									disabled={product.countInStock === 0}
-									className="px-2 py-2 mt-4 ml-4 text-white rounded-lg bg-greenishBlueDark md:mt-0"
+									className="px-2 py-2 mt-4 ml-4 text-white rounded bg-coral-red md:mt-0"
 									onClick={addToCartHandler}
 								>Add to cart</button>
 							</div>
 
 						</div>
 
-						<div className="mt-[2rem] container flex flex-wrap items-start justify-between ml-[10rem]">
+						<div className="mt-[2rem] container flex flex-wrap items-start justify-between xl:ml-[10rem]">
 							<ProductTabs
 								loadingProductReview={loadingProductReview}
 								userInfo={userInfo}

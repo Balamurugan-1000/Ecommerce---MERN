@@ -14,7 +14,7 @@ const Message = ({ varient, children }) => {
 		}
 	}
 	return (
-		<div className={`p-4 ${getVarientClass()}`}>
+		<div className={`p-4 ${getVarientClass()} w-full mx-auto`}>
 			{children ? children : "No message"}
 		</div>
 	)

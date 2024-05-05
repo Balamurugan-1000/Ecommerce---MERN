@@ -3,15 +3,24 @@
 @tailwind utilities;
 
 body {
-	background: #0f0f0f;
+	background: #ECEEFF;
 
 }
 
 input {
-	background: #0f0f0f;
-	color: #fff;
+	background: white;
+	color: #6D6D6D;
 }
 
 body::-webkit-scrollbar {
 	display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #FF6452;
 }

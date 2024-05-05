@@ -28,47 +28,47 @@ const ProductCarousel = () => {
 		autoplaySpeed: 3000
 	}
 	return (
-		<div className="overflow-hidden outline-none mb:4 md:block ">
+		<div className="overflow-hidden outline-none mb:4 mt-[1rem] grid place-content-center rounded md:block shadow-3xl">
 			{isLoading ? null : error ? (
 				<Message varient={'danger'}>
 					{error?.data?.message || error.message}
 				</Message>
-			) : <Slider {...settings} className="md:w-[48rem] xl:w-[45rem] border-none focus:outline-none hover:outline-none  outline-none sm:w-[40rem] overflow-x-hidden  sm:block">
+			) : <Slider {...settings} className="md:w-[48rem] shadow-3xl xl:w-[40rem] border-none focus:outline-none hover:outline-none  outline-none sm:w-[40rem] overflow-x-hidden  sm:block">
 				{products?.map(({ image, _id, name, description, price, brand, createdAt, numReviews, rating, quantity, countInStock }) => (
-					<div className="flex flex-col items-center justify-center w-full mx-auto text-center rounded p-5z " key={_id}>
+					<div className="flex flex-col items-center justify-center w-full p-5 mx-auto text-center rounded" key={_id}>
 						<img src={image} alt={name} className=" rounded-lg p-5 object-contain mx-auto h-[25rem] overflow-x-hidden" style={{ borderRadius: "3rem", width: "550px", outline: "0px" }} />
 						<div className="flex flex-row justify-between mt-[2rem]">
 							<div className="flex justify-center w-[20rem]">
-								<div className="one">
-									<h2 className="p-2 text-2xl font-bold">{name}</h2>
+								<div className="flex-grow one">
+									<h2 className="p-2 text-2xl font-bold text-coral-red">{name}</h2>
 									<p>Rs{price}</p><br /><br />
-									<p className="w-[15rem] text-justify">{description.substring(0, 110)}....</p>
+									<p className="w-[15rem] p-3 text-justify">{description.substring(0, 110)}....</p>
 								</div>
 
 
 							</div>
-							<div className="flex justify-evenly mr-12 w-[20rem]">
+							<div className="flex justify-evenly p-3 mr-12 w-[20rem]">
 								<div className="one ">
-									<h1 className="flex items-center mb-6 w-[13rem]">
+									<p className="flex items-center mb-6 w-[13rem]">
 										<FaStore className="mr-2" /> Brand : {brand}
-									</h1>
-									<h1 className="flex items-center mb-6 w-[13rem]">
+									</p>
+									<p className="flex items-center mb-6 w-[13rem]">
 										<FaClock className="mr-2" /> Added : {moment(createdAt).fromNow()}
-									</h1>
-									<h1 className="flex items-center mb-6 w-[13rem]">
+									</p>
+									<p className="flex items-center mb-6 w-[13rem]">
 										<FaStar className="mr-2" /> Reviews : {numReviews}
-									</h1>
+									</p>
 								</div>
 								<div className="two">
-									<h1 className="flex items-center mb-6 w-[13rem]">
+									<p className="flex items-center mb-6 w-[13rem]">
 										<FaStar className="mr-2" /> Ratings : {Math.round(rating)}
-									</h1>
-									<h1 className="flex items-center mb-6 w-[13rem]">
+									</p>
+									<p className="flex items-center mb-6 w-[13rem]">
 										<FaShoppingCart className="mr-2" /> Quantity : {quantity}
-									</h1>
-									<h1 className="flex items-center mb-6 w-[13rem] overflow-auto">
+									</p>
+									<p className="flex items-center mb-6 w-[13rem] overflow-auto">
 										<FaBox className="mr-2" /> CountInStock : {countInStock}
-									</h1>
+									</p>
 								</div>
 							</div>
 						</div>

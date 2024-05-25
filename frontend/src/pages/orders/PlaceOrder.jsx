@@ -72,7 +72,7 @@ const PlaceOrder = () => {
 
 									<tr key={item._id}>
 										<td className="px-4 py-2 border border-gray-700">
-											<img src={item.image} alt={item.name} className="object-cover w-20 h-20" />
+											<img src={`http://localhost:5000${item.image}`} alt={item.name} className="object-cover w-20 h-20" />
 										</td>
 										<td className="px-4 py-2 border border-gray-700">{item.name}</td>
 										<td className="px-4 py-2 border border-gray-700">{item.qty}</td>

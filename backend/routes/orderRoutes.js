@@ -31,13 +31,3 @@ router
 
 export default router;
 
-
-{/*
-POSTMAN Test 
-
-createOrder : 
-{
-	url : http://localhost:5000/api/orders
-	body : 
-}
-*/}

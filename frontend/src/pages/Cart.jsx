@@ -27,7 +27,7 @@ const Cart = () => {
 						{cartItems?.map((item) => (
 							<div key={item._id} className="flex items-center mb-[1rem] pb-2">
 								<div className="w-[5rem] h-[5rem] ">
-									<img src={item.image} alt={item.name} className="object-cover w-full h-full rounded" />
+									<img src={`http://localhost:5000${item.image}`} alt={item.name} className="object-cover w-full h-full rounded" />
 								</div>
 								<div className="flex-1 ml-4">
 									<Link to={`/product/${item._id}`} className="text-coral-red">{item.name}</Link>

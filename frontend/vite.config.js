@@ -8,7 +8,7 @@ export default defineConfig({
     proxy: {
 
       "/api/": "http://localhost:5000",
-      "/uploads/": "http://localhost:5000",
+      "/uploads/": "http://localhost:5000/api/uploads",
       "/api/product": "http://localhost:5000/product",
     }
   }

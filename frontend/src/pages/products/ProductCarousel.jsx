@@ -36,7 +36,7 @@ const ProductCarousel = () => {
 			) : <Slider {...settings} className="md:w-[48rem] shadow-3xl xl:w-[40rem] border-none focus:outline-none hover:outline-none  outline-none sm:w-[40rem] overflow-x-hidden  sm:block">
 				{products?.map(({ image, _id, name, description, price, brand, createdAt, numReviews, rating, quantity, countInStock }) => (
 					<div className="flex flex-col items-center justify-center w-full p-5 mx-auto text-center rounded" key={_id}>
-						<img src={image} alt={name} className=" rounded-lg p-5 object-contain mx-auto h-[25rem] overflow-x-hidden" style={{ borderRadius: "3rem", width: "550px", outline: "0px" }} />
+						<img src={`http://localhost:5000${image}`} alt={name} className=" rounded-lg p-5 object-contain mx-auto h-[25rem] overflow-x-hidden" style={{ borderRadius: "3rem", width: "550px", outline: "0px" }} />
 						<div className="flex flex-row justify-between mt-[2rem]">
 							<div className="flex justify-center w-[20rem]">
 								<div className="flex-grow one">

@@ -151,7 +151,7 @@ const ProductList = () => {
 						</div>
 						<button
 							onClick={handleSubmit}
-							className="px-10 py-4 mt-5 text-lg font-black rounded-lg bg-[#54bbbd] active:bg-cotext-coral-red transition-colors delay-[10ms]">Submit</button>
+							className="px-10 py-4 mt-5 text-lg font-black rounded-lg bg-coral-red text-white active:bg-cotext-coral-red transition-colors delay-[10ms]">Submit</button>
 					</div>
 
 				</div>

@@ -15,6 +15,7 @@ export default {
         'greenishBlueDark': '#50c7cd',
         'greenishBlueWhite': '#91f0ff',
         'primary': "#ECEEFF",
+        // 'primary': "#101010",
         "coral-red": "#FF6452",
         "slate-gray": "#6D6D6D",
         "pale-blue": "#F5F6FF",

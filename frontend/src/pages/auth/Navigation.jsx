@@ -243,28 +243,7 @@ const Navigation = () => {
 				</ul>
 			)}
 
-			{/* <nav className="flex items-center justify-between max-container">
-				<a href="/">
-					<img
-						src='https://res.cloudinary.com/dk2ot4z6g/image/upload/v1633666824/Group_1_2x'
-						alt="logo"
-						width={129}
-						height={490}
-						className="m-0 w-[129px] h-[29px]"
-					/>
-				</a>
-				<ul className="flex items-center justify-center flex-1 gap-16 max-lg:hidden">
 
-				</ul>
-				<div className="flex gap-2 text-lg font-medium leading-normal font-montserrat max-lg:hidden wide:mr-24">
-					<a href="/">Sign in</a>
-					<span>/</span>
-					<a href="/">Explore now</a>
-				</div>
-				<div className="hidden max-lg:block">
-					<img src='' alt="hamburger icon" width={25} height={25} />
-				</div>
-			</nav> */}
 		</header >
 	);
 };

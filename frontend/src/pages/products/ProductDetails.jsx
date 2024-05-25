@@ -27,6 +27,7 @@ const ProductDetails = () => {
 
 
 	const { data: product, error, isLoading, refetch } = useGetProductDetailsQuery(productId)
+	console.log(product)
 
 	const { userInfo } = useSelector(state => state.auth)
 	const [createReview, { isLoading: loadingProductReview }] = useCreateReviewMutation()
@@ -60,7 +61,7 @@ const ProductDetails = () => {
 					<div className="relative flex flex-wrap   mr-[2rem] gap-[1rem] items-between ml-[10rem] mt-[2rem]">
 						<div className="">
 
-							<img src={product.image} alt={product.name} className="w-full xl:w-[35rem] lg:w-[30rem] md:w-[25rem]  sm:w-[20rem] rounded-lg" />
+							<img src={`http://localhost:5000${product.image}`} alt={product.name} className="w-full xl:w-[35rem] lg:w-[30rem] md:w-[25rem]  sm:w-[20rem] rounded-lg" />
 							<HeartIcon product={product} />
 						</div>
 						<div className="flex flex-col justify-between ">

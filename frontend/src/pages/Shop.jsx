@@ -117,7 +117,7 @@ const Shop = () => {
 						</div>
 						<div className="px-5 py-2 pt-0">
 							<button
-								className="w-full my-4 border rounded"
+								className="w-full my-4 text-white border rounded-xl bg-coral-red"
 								onClick={() => window.location.reload()}
 							>
 								Reset

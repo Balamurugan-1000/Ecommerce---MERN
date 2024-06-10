@@ -11,6 +11,7 @@ import {
 	useGetPaypalClientIdQuery,
 	usePayOrderMutation,
 } from "../../redux/api/orderApiSlice";
+import { imageURL } from "../../redux/constants";
 
 const Order = () => {
 	let { id: orderId } = useParams();
@@ -115,7 +116,7 @@ const Order = () => {
 										<tr key={index}>
 											<td className="p-2">
 												<img
-													src={`http://localhost:5000${item.image}`}
+													src={`${imageURL}${item.image}`}
 													alt={item.name}
 													className="object-cover w-16 h-16"
 												/>

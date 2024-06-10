@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import { addToCart, removeFromCart } from '../redux/features/cart/cartSlice'
 import { FaTrash } from 'react-icons/fa'
+import { imageURL } from "../redux/constants"
 const Cart = () => {
 	const navigate = useNavigate()
 	const dispatch = useDispatch()
@@ -27,7 +28,7 @@ const Cart = () => {
 						{cartItems?.map((item) => (
 							<div key={item._id} className="flex items-center mb-[1rem] pb-2">
 								<div className="w-[5rem] h-[5rem] ">
-									<img src={`http://localhost:5000${item.image}`} alt={item.name} className="object-cover w-full h-full rounded" />
+									<img src={`${imageURL}${item.image}`} alt={item.name} className="object-cover w-full h-full rounded" />
 								</div>
 								<div className="flex-1 ml-4">
 									<Link to={`/product/${item._id}`} className="text-coral-red">{item.name}</Link>

@@ -9,6 +9,7 @@ import Loader from '../../components/Loader'
 import { clearCartItems } from '../../redux/features/cart/cartSlice'
 import { useNavigate } from 'react-router-dom'
 import { useCreateOrderMutation } from '../../redux/api/orderApiSlice'
+import { imageURL } from '../../redux/constants'
 const PlaceOrder = () => {
 	const dispatch = useDispatch()
 	const navigate = useNavigate()
@@ -72,7 +73,7 @@ const PlaceOrder = () => {
 
 									<tr key={item._id}>
 										<td className="px-4 py-2 border border-gray-700">
-											<img src={`http://localhost:5000${item.image}`} alt={item.name} className="object-cover w-20 h-20" />
+											<img src={`${imageURL}${item.image}`} alt={item.name} className="object-cover w-20 h-20" />
 										</td>
 										<td className="px-4 py-2 border border-gray-700">{item.name}</td>
 										<td className="px-4 py-2 border border-gray-700">{item.qty}</td>

@@ -4,6 +4,7 @@ import { useAllProductsQuery } from "../../redux/api/productApiSlice"
 import AdminMenu from "./AdminMenu"
 import Loader from '../../components/Loader'
 import { useEffect } from "react"
+import { imageURL } from "../../redux/constants"
 
 const AllProduct = () => {
 	const { data: products, isError, isLoading, refetch } = useAllProductsQuery()
@@ -24,7 +25,7 @@ const AllProduct = () => {
 						{products?.map(product => (
 
 							<div className="flex gap-5 h-[20rem] p-3  shadow-3xl rounded " key={product._id}>
-								<img src={product.image} alt={product.name} className="w-[12rem]  my-auto h-[15rem] object-fill" />
+								<img src={`${imageURL}${product.image}`} alt={product.name} className="w-[12rem]  my-auto h-[15rem] object-fill" />
 								<div className="flex flex-col justify-around p-4">
 									<div className="flex justify-between ">
 										<h5 className="text-lg font-semibold text-ellipsis ">	{product?.name}</h5>

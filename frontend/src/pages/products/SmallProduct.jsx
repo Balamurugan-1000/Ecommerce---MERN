@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom"
 import HeartIcon from "./HeartIcon"
+import { imageURL } from "../../redux/constants"
 const SmallProduct = ({ product }) => {
 	return (
 
 		<div className="relative flex flex-col items-center m-5 w-[15rem] h-[15rem] shadow-[0_3px_10px_rgb(0,0,0,0.2)] border">
-			<img src={product.image} alt={product.name} className="h-[10rem] w-full rounded " />
+			<img src={`${imageURL}${product.image}`} alt={product.name} className="h-[10rem] w-full rounded " />
 			{<HeartIcon product={product} />}
 			<div className="">
 				<Link to={`/product/${product._id}`}>

@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux"
 import { addToCart } from "../../redux/features/cart/cartSlice"
 import { toast } from "react-toastify"
 import HeartIcon from "./HeartIcon"
+import { imageURL } from "../../redux/constants"
 const ProductCard = ({ p }) => {
 	const dispatch = useDispatch()
 	const addToCartHandler = (product, qty) => {
@@ -20,7 +21,7 @@ const ProductCard = ({ p }) => {
 					</span>
 					<img
 						className="w-full cursor-pointer"
-						src={`http://localhost:5000${p.image}`}
+						src={`${imageURL}${p.image}`}
 						alt={p.name}
 						style={{ height: "170px", objectFit: "cover" }}
 					/>
